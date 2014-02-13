@@ -1,0 +1,201 @@
+\documentclass[finnish]{tktltiki2}
+
+% --- General packages ---
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsfonts,amsmath,amssymb,amsthm,booktabs,color,enumitem,graphicx}
+\usepackage[pdftex,hidelinks]{hyperref}
+
+% Automatically set the PDF metadata fields
+\makeatletter
+\AtBeginDocument{\hypersetup{pdftitle = {\@title}, pdfauthor = {\@author}}}
+\makeatother
+
+% --- Language-related settings ---
+\usepackage[fixlanguage]{babelbib}
+\selectbiblanguage{finnish}
+
+% add bibliography to the table of contents
+\usepackage[nottoc]{tocbibind}
+% tocbibind renames the bibliography, use the following to change it back
+\settocbibname{Lähteet}
+
+% --- Theorem environment definitions ---
+
+\newtheorem{lau}{Lause}
+\newtheorem{lem}[lau]{Lemma}
+\newtheorem{kor}[lau]{Korollaari}
+
+\theoremstyle{definition}
+\newtheorem{maar}[lau]{Määritelmä}
+\newtheorem{ong}{Ongelma}
+\newtheorem{alg}[lau]{Algoritmi}
+\newtheorem{esim}[lau]{Esimerkki}
+
+\theoremstyle{remark}
+\newtheorem*{huom}{Huomautus}
+
+
+% --- tktltiki2 options ---
+%
+% The following commands define the information used to generate title and
+% abstract pages. The following entries should be always specified:
+
+\title{Kognitiivinen oppipoikamalli tietojenkäsittelytieteessä}
+\author{Pessi Moilanen}
+\date{\today}
+\level{Kandidaatintutkielma}
+\abstract{:D}
+
+% The following can be used to specify keywords and classification of the paper:
+
+\keywords{avainsana 1, avainsana 2, avainsana 3}
+
+
+\begin{document}
+
+% --- Front matter ---
+
+\frontmatter      % roman page numbering for front matter
+
+\maketitle        % title page
+\makeabstract     % abstract page
+
+\tableofcontents  % table of contents
+
+% --- Main matter ---
+
+\mainmatter       % clear page, start arabic page numbering
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%****%%%*****%%*****%%*****%%*%%%%
+%%%%*%%%*%%*%%%%%%*%%%%%%*%%%%%%*%%%%
+%%%%*%%%*%%*%%%%%%*%%%%%%*%%%%%%*%%%%
+%%%%*%%%*%%*****%%*****%%*****%%*%%%%
+%%%%****%%%*%%%%%%%%%%*%%%%%%*%%*%%%%
+%%%%*%%%%%%*%%%%%%%%%%*%%%%%%*%%*%%%%
+%%%%*%%%%%%*****%%*****%%*****%%*%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Johdanto}
+
+Ihmiset ovat aina oppineet asioita seuraamalla ja matkimalla toistensa toimintoja. Tiedon ja taitojen eteenpäin siirtäminen jälkipolville on ollut avaimena ihmiskunnan kehittymiselle ja selviytymiselle. Siirrettävän tiedon määrä kasvaa vuosi vuodelta ja tiedon ylläpitoon ja omaksumiseen kuluu enemmän aikaa. Ihmisellä on rajallinen aika oppia asioita, joten se on tehtävä mahdollisimman tehokkaasti ajankäytön suhteen.
+
+Opettamiseen on monia erilaisia tekniikoita. Tässä aineessa käymme läpi kisällioppimisen ja kognitiivisen kisällioppimisen. Käymme läpi kognitiivisen kisällioppimisen erilaiset menetelmät ja kuinka niitä voi soveltaa käytännössä. Samassa yhteydessä käsittelemme myös muutaman tilanteen joissa kognitiivista kisällioppimista on käytetty tietojenkäsittelytieteen opettamisessa.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Kisällioppiminen}
+
+Mestari on henkilö, joka on alansa ammattilainen eli kokenut jossakin tietyssä asiassa. Mestarilla voi olla oppipoikia, jotka hänen alaisenaan pyrkivät saamaan kokemusta ja hiljaista tietoa. Oppipoika eli kisälli on henkilö, joka pyrkii oppimaan mestarilta. Mestari ohjeistaa kisälliä työn suoritukseen soveltaen erilaisia opetustekniikoita. Tarpeeksi harjoiteltuaan kisällistä voi tulla mestari.
+
+\subsection{Perinteinen kisällioppiminen}
+Perinteisessä kisällioppimisessa on oltava mestarin suorittaman työn kaikki eri vaiheet konkreettisesti näkyvissä oppipojalle. Oppipoika seuraa vierestä, kun mestari suorittaa jotakin työtehtävää. Työtehtävä voi olla esimerkiksi sepällä haarniskan takominen, leipurilla kakun leipominen tai räätärillä paidan kutominen. Näissä kaikissa työtehtävissä työn suorituksen vaiheet ovat konkreettisesti näkyvissä oppilaalle. Oppilas pystyy tekemään näistä vaiheista erilaisia muistiinpanoja ja hänen on helppo tarkkailla mitä mestari tekee. Mestari voi antaa oppipojalle erilaisia neuvoja työn suorituksen aikana. Kisälli voi saada suoritettavakseen mestarin avustuksella pienempiä tehtäviä, joista hän saa kokemusta. Oppimisen myötä kisälli voi alkaa tekemään laajempia ja haastavampia tehtäviä itsenäisemmin.
+
+
+\subsection{Kognitiivinen kisällioppiminen}
+Kognitiivisessa kisällioppimisessa käsitellään asioita, joissa työnvaiheet eivät ole konkreettisesti näkyvillä oppipojalle. Tämmöisiä asioita voivat olla esimerkiksi yleinen ongelmanratkaisu, algoritmin valinta tai luetun ymmärtäminen. Kisällin on vaikea saada irti opettajalta, jos ainoa vaihe on kaavojen pyörittely tai ratkaisun ilmestyminen paperille. Oppipojan oppimisen kannalta on mestarin saatava omat ajatuksensa näkyviin. Ajatusten näkyviin tuontiin on erilaisia tekniikoita, joita voidaan soveltaa tilanteesta riippuen. Kognitiivisessä kisällioppimisessa on samat periaatteet kuin perinteisessä kisällioppimisessa, poikkeavuutena on opetettavien asioiden luonne ja kuinka oppi saadaan perille oppilaalle.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Opettamistavat}
+
+Kognitiiviseen kisällioppimiseen on määritelty kuusi erilaista opetusmenetelmää. 
+
+\subsection{Mallintaminen}
+Mallintamisessa työn suorittamisen eri vaiheet pyritään saamaan näkyviin oppilaalle. Työn suorittaa normaalisti opettaja tai muu oppilasta kokeneempi henkilö. Oppilas pyrkii saamaan kokemusta ja muodostamaan mahdollisen käsitteellissen mallin suoritetuista vaiheista. Oppilas näkee mahdollisen syy seuraussuhteen ja saa käsityksen miten suoritetut vaiheet johtavat onnistuneeseen lopputulokseen. 
+
+Kognitiivisessä kisällioppimisessa ongelmana on ajatustyön esille saanti oppilaalle, niin on pyrittävä käyttämään keinoja, joilla oppilas hahmottaa ne.  Ongelmanratkaisuprosessia mallintaessa pitää ajatustyö suorittaa ääneen ja nämä ongelmanratkaisuprosessin vaiheet voidaan kirjoittaa ylös oppilaille näkyviin.
+
+\subsection{Valmentaminen}
+Valmentamisessa opettaja tarkkailee oppilaan työskentelyä ja antaa hänelle henkilökohtaisia neuvoja ja pystyy avustamaan oppilasta kriittisillä hetkillä. Opettaja pyrkii samaistumaan oppilaan osaamiseen ja pyrkii ohjaamaan tätä oikeaan suuntaan. Opettaja voi rakentaa oppilaalle tehtäviä, jotka olisivat oppilaan osaamiselle sopivia.
+
+\subsection{Oppimisen oikea-aikainen tukeminen}
+Oppimisen oikea-aikainen tukeminen käsittää erilaisia tekniikoita ja strategioita oppilaan oppimisen tukemiseen. Oppilaalle voidaan antaa tehtäviä, jotka sisältävät tekniikoita, joita oppilas ei entuudestaan osaa. Opettaja antaa oppilaalle apua tehtävän vaiheissa, joita oppilas ei vielä itse osaa suorittaa. Opettajalle on tärkeää, että hän osaa arvioida oppilaan taitotasoa. Opettaja vähentää antamaansa tukea hiljalleen, jättäen oppilaalle enemmän vastuuta. Nämä keinot kehittävät oppilaan itsetietoisuutta ja he oppivat korjaamaan itse virheitään, joidenka seurauksena he eivät tarvitse enää niin paljoa ulkopuolista apua.
+
+\subsection{Artikulointi}
+Artikuloinnissa oppilaiden on muutettava ajatuksensa, tietonsa ja ajatusprosessinsa sanoiksi. Artikuloinnin seurauksena oppilaat voivat vertailla paremmin omaa ajatteluaan opettajan ajatteluun ja opettaja pääsee käsiksi oppilaan ongelmanratkaisuprosessiin. Opettaja voi pyytää oppilaita puhumaan ääneen oppilaan suorittaessa jotakin tehtävää, näin oppilas joutuu muotoilemaan ajatuksensa sanoiksi. 
+
+Oppilaan voi laittaa pariohjelmoimaan toisen henkilön kanssa, tässä tilanteessa oppilaan on kommunikoitava toisen osapuolen kanssa ja esitettävä tälle ajatuksensa.
+
+Oppilaalle voidaan esittää muotoiltuja kysymyksiä. Kuinka-kysymysten sijaan oppilaille kannattaa esittää miksi-kysymyksiä. Oppilas voidaa pyytää ohjelmoimaan ratkaisu johonkin tehtävään ja sen lisäksi kysyä miksi kyseinen koodi toimii. Oppilas joutuu tehtävän ratkaisun ohella miettimään omaa työskentelyään syvemmin. \cite{cutts2012}
+
+\subsection{Peilaaminen}
+Peilaamisessa oppilas vertailee työskentelyään opettajaan, kokeneempaan henkilöön tai toiseen oppilaasen. Oppilas saa tätä kautta tietoa siitä, miten heidän työskentelynsä poikkeaa tämän toisen henkilön työskentelystä. Näin oppilas voi nähdä mihin asioihin hänen on panostettava tullakseen paremmiksi. Oppilas voi muistella aiempaa työskentelyään ja miettiä mitä he ovat oppineet. Peilaamisen seurauksena oppilaan itetietoisuus voi kehittyä ja hän pystyy vertailemaan ymmärrystään toisten ymmärrykseen.
+
+\subsection{Tutkiminen}
+Tutkimisessa oppilas joutuu keksimään uusia tapoja, strategioita ja erilaisia keinoja lähestyä ongelmia. Oppilas joutuu kehittämään itse kysymyksiä ja ongelmia, joita hän pyrkii ratkaisemaan. Muodostaessaan omia ongelmia kehittyy oppilaan taito määritellä, käydä läpi ongelman vaatimat ominaisuudet. Samalla oppilaan taito itsenäiseen työskentelyyn kehittyy.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Ohjelmoinnin opetus}
+Kun ohjelmointia aletaan opettamaan täysin kokemattomalle, ei tavoitteena ole luoda oppilaita, jotka osaavat luoda toimivia ohjelmia konemaisesti ilman syvempää ymmärrystä asiasta. Turhan usein opetuksessa keskitytään lopputulokseen. On pyrittävä luomaan oppilaita, jotka osaavat soveltaa ohjelmoinnin käsitteitä ja rakenteita ohjelmointiin liittyviin ongelmiin. Tämä onnistuu jos tehtävät jaetaan pienempiin osiin. Kun tehtävät jaetaan askeleiksi saa niistä enemmän irti, jokaisella askeleella on merkitys lopputuloksen kannalta.\cite{cutts2012} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Opettamistapojen soveltaminen käytännössä}
+Kognitiivisen kisälliopetuksen opetusmenetelmiä voidaan soveltaa käytännössä erilaisin tavoin. Käymme läpi muutamia tilanteita ja tapoja, kuinka menetelmiä on sovellettu käytännössä ja miten se on sujunut.
+
+\subsection{Pajaohjelmointi}
+
+\subsection{Pariohjelmointi}
+
+\subsection{Muotoillut esimerkit(!!lähteistä kysymys!!)}
+(pitäskö viitata artikkelin lähteisiin ja pitääkö nämä lähteet myös tällöin tarkastaa vai voiko viitata pelkkään artikkeliin mistä luettu ja missä menee raja miten paljon saa ottaa toisesta artikkelista "suoraan" kääntäen eri kieleksi kun siihen viittaa?)
+
+"Huonot" opiskelijat tutkivat lähinnä
+
+Tutkimukset osoittavat, että opiskelijat keräävät tietoa mieluiten esimerkeistä, verrattuna muunlaisiin opiskelumateriaaleihin. Opiskelijat oppivat myös enemmän tutkimalla esimerkkejä, kuin tekemällä samat tehtävät itse. Muotoillut esimerkit soveltuvat opiskelukohteisiin, joissa taidonhankkiminen on oleellista kuten musiikissa, shakissa ja ohjelmoinnissa. 
+
+Muotoillut esimerkit auttavat skeemojen muodostamisessa ja oppimisen kehittämisessä. \cite{caspersen2007}
+
+\subsection{Kysymysten muotoilu}
+Tämä aliluku pohjautuu \cite{cutts2012} artikkeliin. Kerromme kuinka kyseisessä artikkelissa käydään läpi miten muotoiltuja kysymyksiä pystyy käyttämään ohjelmoinnin opetuksessa.
+
+Artikkelissa he tarkastelivat jonkin Yhdysvalloissa sijaitsevan yliopiston 7 eri CS0-, CS1- ja CS2-ohjelmointikurssien eli ohjelmoinnin peruskurssien opetusmateriaalejen sisältämien tehtävien rakennetta. Jokainen näistä kursseista arvosteltiin kurssikokeen perusteella, joten kurssien oppimistavoitteet pohjautuivat niihin. 
+
+Opetusmateriaalien tehtävistä noin viidesosa oli miksi-kysymyksiä ja loput kuinka-kysymyksiä. Kuinka-kysymyksissä opiskelija voi joutua kirjoittamaan toimivan koodin ohjelmointitehtävään, mutta miksi-kysymyksissä joutuu hän perustelemaan miksi koodi toimii kyseisessä tehtävässä. Kurssikokeissa puolestaan miksi-kysymyksiä oli vielä vähemmän, niitä oli 0\%-15\% välillä kokonaiskysymys määrästä. 
+
+Kuinka-kysymykset voivat luoda oppilaille harhaanjohtavan käsityksen millä tasolla asioita on tärkeää osata kokeessa. Oppilas voi opetella  muodostamaan vastaukset kysymyksiin ulkomuistista, ilman syvempää ymmärrystä miksi ja miten hänen vastauksensa oikeasti toimivat. Tämä kannustaa oppilaita ratkaisemaan ongelmia ymmärtämättä niitä, koska miksi nähdä ylimääräistä vaivaa ymmärryksen saamiseen, jos tehtävät voi ratkaista vähemmälläkin.
+
+Miksi-kysymyksissä oppilas joutuu rakentamaan syvempää ymmärrystä opetettuun asiaan. Hän joutuu käsittelemään tehtävää syvemmin ja käymään läpi lopputulokseen johtavia vaiheita tarkemmin. Kun oppilas ymmärtää asian syvemmin pystyy hän perustelemaan vastauksiaan ja muodostamaan yhtenäisen konseptin lopputulokseen johtavista askeleista. Miksi-kysymyksiin tehtyjä vastauksia on kuitenkin haastavampi arvostella, koska vastaukset poikkeavat oppilaiden välillä ja heidän ajatusprosessinsa ovat yksilöllisiä.
+
+Johtopäätöksinä he totesivat miksi-kysymyksiä olevan liian vähän. Heillä ei ole konkreettisia todisteita muotoiltujen kysymyksien toimivuudesta, mutta monet tekijät tukevat ideaa niiden toimivuudesta. Miksi-kysymyksiä tukevia tekijöitä löytyy kognitiivisen kisällioppimisen ja oppimisen tilannesidonnaisuudesta.
+
+\subsection{Valmentaminen käytännössä}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Yhteenveto}
+
+
+%
+%
+%
+
+% --- References ---
+%
+% bibtex is used to generate the bibliography. The babplain style
+% will generate numeric references (e.g. [1]) appropriate for theoretical
+% computer science. If you need alphanumeric references (e.g [Tur90]), use
+%
+% \bibliographystyle{babalpha-lf}
+%
+% instead.
+
+\bibliographystyle{babplain-lf}
+\bibliography{references-fi}
+
+
+% --- Appendices ---
+
+% uncomment the following
+
+% \newpage
+% \appendix
+% 
+% \section{Esimerkkiliite}
+
+\end{document}
